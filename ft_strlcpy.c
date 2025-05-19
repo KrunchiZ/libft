@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 09:56:25 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/19 19:44:23 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/19 19:56:49 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	return (srclen);
 }
 
+/*
 #include <stdio.h>
 int	main(void)
 {
@@ -43,3 +44,4 @@ int	main(void)
 	printf("new dest = \"%s\"\nNote: src length = %lu", dest, len);
 	return (0);
 }
+*/
