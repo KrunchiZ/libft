@@ -6,11 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 14:54:07 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/19 15:23:17 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/19 15:26:18 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stblib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
