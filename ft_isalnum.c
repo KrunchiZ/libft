@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 11:50:20 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/19 11:56:51 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/19 14:00:49 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	ft_isalnum(int c)
 	return (0);
 }
 
+/*
 #include <stdio.h>
 int	main(int argc, char **argv)
 {
@@ -31,3 +32,4 @@ int	main(int argc, char **argv)
 	}
 	return (0);
 }
+*/
