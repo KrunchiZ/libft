@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/19 16:55:21 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/20 16:37:52 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <limits.h>
+# define ABS(m) (m) * (m > 0) - (m) * (m < 0)
 
 #endif
