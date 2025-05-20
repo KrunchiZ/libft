@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 14:07:07 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/20 19:29:45 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/20 19:31:06 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	lil_len;
-	int		i;
 
 	lil_len = ft_strlen(little);
 	if (lil_len == 0)
