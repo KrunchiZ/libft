@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:22:11 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/20 12:15:00 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/20 12:20:20 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // look for c in s for the first n bytes
 // return NULL if nothing is found
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*tmp;
 
