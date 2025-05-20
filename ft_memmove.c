@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 18:14:12 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/19 19:47:30 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/20 19:25:44 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	if (dest < src)
 		return (ft_memcpy(dest, src, n));
-	temp_src = (unsigned char)src;
-	temp_dest = (unsigned char)dest;
+	temp_src = (unsigned char *)src;
+	temp_dest = (unsigned char *)dest;
 	while (--n > 0)
 		temp_dest[n] = temp_src[n];
 	temp_dest[0] = temp_src[0];
