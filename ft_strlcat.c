@@ -6,9 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 15:12:01 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/20 09:47:29 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/20 19:28:32 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 // replicating strlcat
 // concatenate src to dest without causing overflow
