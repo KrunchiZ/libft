@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 11:11:14 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/20 16:11:25 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/20 19:27:01 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *src)
 	size_t	i;
 
 	len = ft_strlen(src);
-	host = (char *)malloc(length + 1);
+	host = (char *)malloc(len + 1);
 	if (host == NULL)
 		return (NULL);
 	i = 0;
