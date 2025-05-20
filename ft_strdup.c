@@ -6,12 +6,13 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 11:11:14 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/20 16:09:52 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/20 16:11:25 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* duplicate a string using malloc then return it */
 char	*ft_strdup(const char *src)
 {
 	char	*host;
