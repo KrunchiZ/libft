@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 14:07:07 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/20 15:22:20 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/20 19:29:45 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *)big);
 	while (len > 0 && *big)
 	{
-		if (len < little_len)
+		if (len < lil_len)
 			return (NULL);
 		if (ft_strncmp(big, little, lil_len) == 0)
 			return ((char *)big);
