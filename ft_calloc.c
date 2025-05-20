@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 16:10:40 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/20 17:11:25 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/20 17:31:39 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /* allocate memory for nmemb elements with size bytes each */
 /* if nmemb or size is 0, return a unique pointer */
 /* if nmemb * size > ULONG_MAX, return NULL */
-void	*calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*host;
 
