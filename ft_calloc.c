@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 16:10:40 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/20 17:31:39 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/21 10:25:25 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,15 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*host;
 
-	if ((ULONG_MAX / nmemb) < size || nmemb == 0 || size == 0)
+	if ((ULONG_MAX / nmemb) < size)
 		return (NULL);
+	if (nmemb == 0 || size == 0)
+	{
+		host = malloc(1);
+		if (host == NULL)
+			return (NULL);
+		return (host);
+	}
 	host = malloc(nmemb * size);
 	if (host == NULL)
 		return (NULL);
