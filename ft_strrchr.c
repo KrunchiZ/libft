@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 10:20:43 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/20 11:23:42 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/21 14:20:00 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,15 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*last;
-	char	*temp;
 
-	temp = (char *)s;
 	last = NULL;
-	while (*temp)
+	while (*s)
 	{
-		if (*temp == c)
-			last = temp;
-		temp++;
+		if (*s == (char)c)
+			last = (char *)s;
+		s++;
 	}
-	if (*temp == c)
-		last = temp;
+	if (*s == (char)c)
+		last = (char *)s;
 	return (last);
 }
