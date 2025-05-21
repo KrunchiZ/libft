@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 10:37:22 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/21 09:30:38 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/21 09:31:43 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		if (*s1 - *s2)
 			return ((unsigned char)(*s1 - *s2));
-		tmp1++;
-		tmp2++;
+		s1++;
+		s2++;
 	}
 	return (0);
 }
