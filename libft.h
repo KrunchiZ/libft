@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/21 16:03:40 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/21 17:00:15 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <limits.h>
-# define ABS(m) ((m) * (m > 0) - (m) * (m < 0))
 
 int		ft_atoi(const char *nptr);
 int		ft_isalnum(int c);
