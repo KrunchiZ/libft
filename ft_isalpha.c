@@ -6,17 +6,14 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 10:39:07 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/21 17:26:31 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/21 22:02:00 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //return 1 if c is ascii alphabet letters
 int	ft_isalpha(int c)
 {
-	unsigned char	ch;
-
-	ch = (unsigned char)c;
-	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	return (0);
 }
