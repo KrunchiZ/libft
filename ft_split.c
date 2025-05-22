@@ -6,12 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 09:19:41 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/22 12:39:58 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/22 12:43:43 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_wordcount(const char *s, char c, int word)
 {
@@ -77,7 +76,7 @@ int	ft_fillhost(char **host, const char *s, char c, int word)
 
 char	**ft_split(const char *s, char c)
 {
-	int	word;
+	int		word;
 	char	**host;
 
 	if (s == NULL || *s == '\0')
