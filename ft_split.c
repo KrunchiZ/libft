@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 09:19:41 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/22 11:58:18 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/22 12:03:33 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,11 @@ int	ft_fillhost(char **host, const char *s, char c, int word)
 	{
 		if (s[i] != c && (i == 0 || (i > 0 && s[i - 1] == c)))
 		{
-			wordlen = ft_wordlen(s[i], c);
+			wordlen = ft_wordlen(&s[i], c);
 			host[depth] = ft_calloc(wordlen + 1, 1);
 			if (host == NULL)
 			{
-				ft_freehost(&host, depth);
+				ft_freehost(host, depth);
 				return (0);
 			}
 			ft_strlcpy(host[depth], &s[i], wordlen + 1);
@@ -87,7 +87,7 @@ char	**ft_split(const char *s, char c)
 	host = ft_calloc(word + 1, sizeof(char *));
 	if (!host)
 		return (NULL);
-	if (ft_fillhost(&host, s, c, word))
+	if (ft_fillhost(host, s, c, word))
 		return (host);
 	return (NULL);
 }
