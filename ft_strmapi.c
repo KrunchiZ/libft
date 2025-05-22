@@ -6,17 +6,21 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 16:13:34 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/22 16:39:06 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/22 16:50:40 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
 	char			*host;
 	unsigned int	i;
 
-	if (!*s)
+	if (!s)
 		return (NULL);
+	if (!*s)
+		return (ft_strdup(""));
 	host = ft_strdup(s);
 	if (host == NULL)
 		return (NULL);
