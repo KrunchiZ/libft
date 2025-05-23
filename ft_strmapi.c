@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 16:13:34 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/23 13:27:59 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/23 23:02:08 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,14 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	host = ft_strdup(s);
 	if (host == NULL)
 		return (NULL);
-	i = 0;
-	while (s[i])
+	if (f)
 	{
-		host[i] = f(i, s[i]);
-		i++;
+		i = 0;
+		while (s[i])
+		{
+			host[i] = f(i, s[i]);
+			i++;
+		}
 	}
 	return (host);
 }
