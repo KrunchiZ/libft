@@ -44,7 +44,7 @@ fclean: clean
 	@echo "Removing $(GREEN)$(NAME)$(WHITE)..."
 
 clean:
-	@rm -f $(OBJS)
+	@rm -f $(OBJS) $(BONUS_OBJS)
 	@echo "Removing object files..."
 
 re: fclean all
