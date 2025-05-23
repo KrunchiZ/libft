@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 18:35:06 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/21 19:54:11 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/23 17:04:35 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	while (ft_strchr(set, *(s1 + len - 1)))
 		len--;
 	host = ft_calloc(len + 1, 1);
-	if (host)
-	{
-		ft_strlcpy(host, s1, len + 1);
-		return (host);
-	}
-	return (NULL);
+	if (host == NULL)
+		return (NULL);
+	ft_strlcpy(host, s1, len + 1);
+	return (host);
 }
