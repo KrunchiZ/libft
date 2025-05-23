@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 14:45:41 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/21 18:16:55 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/23 21:27:37 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	char	*host;
 	size_t	srclen;
 
+	if (s == NULL)
+		return (NULL);
 	srclen = ft_strlen(s);
 	if (len == 0 || srclen < start)
 		return (ft_calloc(1, 1));
