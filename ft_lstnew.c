@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 12:50:54 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/23 23:35:59 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/23 23:49:31 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;
 
-	if (!content)
-		return (NULL);
 	new_node = malloc(sizeof(t_list));
 	if (new_node == NULL)
 		return (NULL);
