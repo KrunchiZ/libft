@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 21:40:07 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/23 22:19:21 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/23 23:27:33 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*first_node;
 
 	first_node = NULL;
-	if (!lst)
+	if (!lst || !f || !del)
 		return (NULL);
 	while (lst)
 	{
