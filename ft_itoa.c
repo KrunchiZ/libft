@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 14:53:30 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/22 16:09:10 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/23 11:40:50 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ char	*ft_itoa(int n)
 	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	is_neg = 0;
-	depth = 12;
-	tmp[--depth] = '\0';
+	depth = 11;
+	tmp[depth] = '\0';
 	if (n < 0)
 	{
 		is_neg = 1;
