@@ -18,7 +18,6 @@ BONUS_SRCS := \
 OBJS := $(SRCS:.c=.o)
 BONUS_OBJS := $(BONUS_SRCS:.c=.o)
 
-
 GREEN := \e[32m
 CYAN := \e[36m
 WHITE := \e[0m
