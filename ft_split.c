@@ -6,12 +6,13 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 09:19:41 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/22 14:49:38 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/23 13:22:33 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* count word number in s using c as separator */
 int	ft_wordcount(const char *s, char c, int word)
 {
 	int	i;
@@ -26,6 +27,7 @@ int	ft_wordcount(const char *s, char c, int word)
 	return (word);
 }
 
+/* ft_strlen but with a separator c check as well */
 int	ft_wordlen(const char *s, const char c)
 {
 	int	len;
@@ -39,6 +41,7 @@ int	ft_wordlen(const char *s, const char c)
 	return (len);
 }
 
+/* free the host array from depth towards the front */
 void	ft_freehost(char **host, int depth)
 {
 	while (depth >= 0)
@@ -47,6 +50,7 @@ void	ft_freehost(char **host, int depth)
 	return ;
 }
 
+/* move across s and allocata memory for every word */
 int	ft_fillhost(char **host, const char *s, char c, int word)
 {
 	int	i;
@@ -74,6 +78,7 @@ int	ft_fillhost(char **host, const char *s, char c, int word)
 	return (1);
 }
 
+/* split s into individual word in an array and return it */
 char	**ft_split(const char *s, char c)
 {
 	int		word;

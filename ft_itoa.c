@@ -6,12 +6,13 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 14:53:30 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/23 11:40:50 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/23 13:23:14 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Convert integer to a string */
 char	*ft_itoa(int n)
 {
 	char	tmp[12];

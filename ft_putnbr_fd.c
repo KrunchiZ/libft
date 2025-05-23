@@ -6,12 +6,13 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 11:15:31 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/23 11:53:49 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/23 13:33:27 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* write integer n as a string to file descriptor fd */
 void	exec_ft_putnbr_fd(int n, int fd, int is_neg, int depth)
 {
 	char	nbr[12];
@@ -33,6 +34,7 @@ void	exec_ft_putnbr_fd(int n, int fd, int is_neg, int depth)
 	return ;
 }
 
+/* Checking for 0 and INT_MIN before exec_ft_putnbr_fd */
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == 0)

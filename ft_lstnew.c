@@ -1,21 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/23 11:06:00 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/23 13:30:10 by kchiang          ###   ########.fr       */
+/*   Created: 2025/05/23 12:50:54 by kchiang           #+#    #+#             */
+/*   Updated: 2025/05/23 13:16:42 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// write string s to the file descriptor fd
-void	ft_putstr_fd(char *s, int fd)
+t_list	*ft_lstnew(void *content)
 {
-	while (*s)
-		write(fd, s++, 1);
-	return ;
 }
