@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 12:21:22 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/21 11:04:24 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/24 15:00:06 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*tmp_s1;
 	unsigned char	*tmp_s2;
 
+	if (!s1 && !s2)
+		return (0);
+	if (!s1 && s2)
+		return (-1);
+	if (s1 && !s2)
+		return (1);
 	tmp_s1 = (unsigned char *)s1;
 	tmp_s2 = (unsigned char *)s2;
 	while (n > 0)

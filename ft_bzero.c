@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 17:18:20 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/19 17:27:04 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/24 14:06:28 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*temp;
 
+	if (!s)
+		return ;
 	temp = (unsigned char *)s;
 	while (n-- > 0)
 		*temp++ = 0;

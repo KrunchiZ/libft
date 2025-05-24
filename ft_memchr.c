@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:22:11 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/21 10:52:04 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/24 14:09:58 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*tmp;
 
+	if (!s)
+		return (NULL);
 	tmp = (unsigned char *)s;
 	while (n > 0)
 	{
