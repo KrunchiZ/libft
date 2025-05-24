@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 14:54:07 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/19 15:26:18 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/24 13:33:02 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,9 @@ size_t	ft_strlen(const char *s)
 	size_t	len;
 
 	len = 0;
+	if (!s)
+		return (len);
 	while (*s++)
 		len++;
 	return (len);
 }
-
-/*
-#include <stdio.h>
-int	main(int argc, char **argv)
-{
-	if (argc == 2)
-	{
-		size_t	len = ft_strlen(argv[1]);
-		printf("length = %lu", len);
-	}
-	return (0);
-}
-*/

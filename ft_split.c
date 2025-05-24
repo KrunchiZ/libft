@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 09:19:41 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/23 13:22:33 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/24 13:23:42 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,8 @@ char	**ft_split(const char *s, char c)
 	int		word;
 	char	**host;
 
+	if (!s)
+		return (NULL);
 	if (!*s)
 		return (ft_calloc(1, sizeof(char *)));
 	word = ft_wordcount(s, c, 0);

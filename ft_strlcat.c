@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 15:12:01 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/20 19:28:32 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/24 13:42:24 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 	src_len = ft_strlen(src);
 	dest_len = ft_strlen(dest);
-	if (size <= dest_len)
+	if (size <= dest_len || !dest)
 		return (size + src_len);
+	if (!src)
+		return (dest_len + src_len);
 	i = 0;
 	while (dest_len + i < size - 1)
 	{
@@ -35,19 +37,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dest_len + i] = '\0';
 	return (dest_len + src_len);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	*src = "abc";
-	char	dest[10] = "012345";
-	size_t		n = 8;
-	size_t		length;
-
-	printf("\"%s\" + \"%s\"\n", dest, src);
-	length = ft_strlcat(dest, src, n);
-	printf("=> \"%s\", returned length = %d", dest, length);
-	return (0);
-}
-*/
