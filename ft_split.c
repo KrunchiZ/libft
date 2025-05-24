@@ -6,14 +6,14 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 09:19:41 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/24 13:23:42 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/24 17:28:22 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /* count word number in s using c as separator */
-int	ft_wordcount(const char *s, char c, int word)
+static int	ft_wordcount(const char *s, char c, int word)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ int	ft_wordcount(const char *s, char c, int word)
 }
 
 /* ft_strlen but with a separator c check as well */
-int	ft_wordlen(const char *s, const char c)
+static int	ft_wordlen(const char *s, const char c)
 {
 	int	len;
 
@@ -42,7 +42,7 @@ int	ft_wordlen(const char *s, const char c)
 }
 
 /* free the host array from depth towards the front */
-void	ft_freehost(char **host, int depth)
+static void	ft_freehost(char **host, int depth)
 {
 	while (depth >= 0)
 		free(host[depth--]);
@@ -51,7 +51,7 @@ void	ft_freehost(char **host, int depth)
 }
 
 /* move across s and allocata memory for every word */
-int	ft_fillhost(char **host, const char *s, char c, int word)
+static int	ft_fillhost(char **host, const char *s, char c, int word)
 {
 	int	i;
 	int	depth;
