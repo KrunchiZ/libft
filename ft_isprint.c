@@ -6,14 +6,12 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 13:54:23 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/26 09:29:30 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/26 10:30:15 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // return 1 if c is printable ascii character
 int	ft_isprint(int c)
 {
-	if (c >= ' ' && c <= '~')
-		return (1);
-	return (0);
+	return (c >= ' ' && c <= '~');
 }

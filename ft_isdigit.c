@@ -6,14 +6,12 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 11:39:26 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/26 09:29:15 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/26 10:30:00 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // return 1 if c is a digit character
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	return (c >= '0' && c <= '9');
 }
