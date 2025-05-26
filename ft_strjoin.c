@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:52:10 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/21 18:22:34 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/26 14:40:05 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	size_t	len2;
 
 	if (!s1 && !s2)
-		return (ft_calloc(1, 1));
+		return (NULL);
 	if (!s1)
 		return (ft_strdup(s2));
 	if (!s2)

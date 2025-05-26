@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 21:40:07 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/23 23:27:33 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/26 14:37:29 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,26 @@
 /* Copy the whole lst to a new list */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_node;
 	t_list	*first_node;
+	t_list	*current;
 
-	first_node = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
+	first_node = ft_lstnew(f(lst->content));
+	if (!first_node)
+		return (NULL);
+	lst = lst->next;
+	current = first_node;
 	while (lst)
 	{
-		new_node = ft_lstnew(f(lst->content));
-		if (new_node == NULL)
+		current->next = ft_lstnew(f(lst->content));
+		if (current->next == NULL)
 		{
 			ft_lstclear(&first_node, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&first_node, new_node);
+		current = current->next;
 		lst = lst->next;
 	}
-	ft_lstadd_back(&first_node, NULL);
 	return (first_node);
 }
