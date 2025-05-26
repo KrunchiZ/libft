@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 09:19:41 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/26 15:50:19 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/26 15:56:42 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static int	ft_fillhost(char **host, const char *s, char c, int word)
 		if (s[i] != c && (i == 0 || (i > 0 && s[i - 1] == c)))
 		{
 			wordlen = ft_wordlen(&s[i], c);
-			host[depth] = ft_calloc(wordlen + 1, 1);
+			host[depth] = malloc(wordlen + 1);
 			if (host == NULL)
 			{
 				while (depth >= 0)
