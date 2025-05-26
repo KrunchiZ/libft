@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 09:19:41 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/26 15:56:42 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/05/26 16:13:00 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,6 @@ char	**ft_split(const char *s, char c)
 
 	if (!s)
 		return (NULL);
-	if (!*s)
-		return (ft_calloc(1, sizeof(char *)));
 	i = 0;
 	word = 0;
 	while (s[i])
