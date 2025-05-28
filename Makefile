@@ -30,20 +30,20 @@ $(NAME): $(OBJS)
 	@ar rcs $@ $^
 	@echo "Archiving $(GREEN)$(NAME)$(WHITE)..."
 
-bonus: $(NAME) $(BONUS_OBJS)
-	@ar rcs $(NAME) $^
-	@echo "Archiving bonus $(GREEN)$(NAME)$(WHITE)..."
+bonus: $(bonus_objs)
+	@ar rcs $(name) $^
+	@echo "archiving bonus $(green)$(name)$(white)..."
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "Compiling $(CYAN)$@$(WHITE)..."
+	@$(cc) $(cflags) -c $< -o $@
+	@echo "compiling $(cyan)$@$(white)..."
 
 fclean: clean
-	@rm -f $(NAME)
-	@echo "Removing $(GREEN)$(NAME)$(WHITE)..."
+	@rm -f $(name)
+	@echo "removing $(green)$(name)$(white)..."
 
 clean:
-	@rm -f $(OBJS) $(BONUS_OBJS)
-	@echo "Removing object files..."
+	@rm -f $(objs) $(bonus_objs)
+	@echo "removing object files..."
 
 re: fclean all
