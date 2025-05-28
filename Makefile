@@ -30,7 +30,7 @@ $(NAME): $(OBJS)
 	@ar rcs $@ $^
 	@echo "Archiving $(GREEN)$(NAME)$(WHITE)..."
 
-bonus: $(BONUS_OBJS)
+bonus: $(NAME) $(BONUS_OBJS)
 	@ar rcs $(NAME) $^
 	@echo "Archiving bonus $(GREEN)$(NAME)$(WHITE)..."
 
