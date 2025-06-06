@@ -9,30 +9,23 @@ SRCS := \
 		ft_strlcat.c	ft_strlcpy.c	ft_strlen.c		ft_strncmp.c	ft_strnstr.c	\
 		ft_strrchr.c	ft_tolower.c	ft_toupper.c	ft_substr.c		ft_strjoin.c	\
 		ft_strtrim.c	ft_split.c		ft_itoa.c		ft_strmapi.c	ft_striteri.c	\
-		ft_putchar_fd.c	ft_putstr_fd.c	ft_putendl_fd.c	ft_putnbr_fd.c
-BONUS_SRCS := \
-			  ft_lstnew.c		ft_lstadd_front.c	ft_lstsize.c	ft_lstlast.c	\
-			  ft_lstadd_back.c	ft_lstdelone.c		ft_lstclear.c	ft_lstiter.c	\
-			  ft_lstmap.c
+		ft_putchar_fd.c	ft_putstr_fd.c	ft_putendl_fd.c	ft_putnbr_fd.c	ft_lstmap.c		\
+		ft_lstnew.c		ft_lstadd_front.c	ft_lstsize.c	ft_lstlast.c	\
+		ft_lstadd_back.c	ft_lstdelone.c		ft_lstclear.c	ft_lstiter.c
 
 OBJS := $(SRCS:.c=.o)
-BONUS_OBJS := $(BONUS_SRCS:.c=.o)
 
 GREEN := \e[32m
 CYAN := \e[36m
 WHITE := \e[0m
 
-.PHONY: all fclean clean re bonus
+.PHONY: all fclean clean re
 
 all: $(NAME)
 
 $(NAME): $(OBJS) 
 	@ar rcs $@ $^
 	@echo "Archiving $(GREEN)$(NAME)$(WHITE)..."
-
-bonus: $(BONUS_OBJS)
-	@ar rcs $(NAME) $^
-	@echo "archiving bonus $(GREEN)$(NAME)$(WHITE)..."
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -43,7 +36,7 @@ fclean: clean
 	@echo "removing $(GREEN)$(NAME)$(WHITE)..."
 
 clean:
-	@rm -f $(OBJS) $(BONUS_OBJS)
+	@rm -f $(OBJS)
 	@echo "removing object files..."
 
 re: fclean all
