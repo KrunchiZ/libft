@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/08 18:44:56 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/08 21:45:32 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,13 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+/* Shorthands for unsigned variable types */
+typedef unsigned char		t_uchar;
+typedef unsigned int		t_uint;
+typedef unsigned long		t_ulong;
+typedef unsigned long long	t_ullong;
+typedef long long			t_llong;
 
 // PART I & II
 long long	ft_atoi(const char *nptr);
