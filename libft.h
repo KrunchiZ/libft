@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/29 12:19:00 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/08 18:09:12 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-char	*ft_itoa(int n);
+char	*ft_itoa(long long n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *src);
 char	*ft_strjoin(const char *s1, const char *s2);
