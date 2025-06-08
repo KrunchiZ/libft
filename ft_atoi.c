@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 15:28:26 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/24 14:08:31 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/08 18:04:11 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 /* the moment it hits a non digit, return nbr */
 int	ft_atoi(const char *nptr)
 {
-	int	sign;
-	int	nbr;
+	int			sign;
+	long long	nbr;
 
 	sign = 1;
 	nbr = 0;
@@ -24,10 +24,10 @@ int	ft_atoi(const char *nptr)
 		return (0);
 	while ((*nptr >= 9 && *nptr <= 13) || *nptr == ' ')
 		nptr++;
-	if (*nptr == '+' || *nptr == '-')
+	while (*nptr == '+' || *nptr == '-')
 	{
 		if (*nptr == '-')
-			sign = -1;
+			sign = -sign;
 		nptr++;
 	}
 	while (*nptr >= '0' && *nptr <= '9')
