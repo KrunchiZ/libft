@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 14:53:30 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/08 19:02:07 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/08 19:04:10 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,9 @@ static int	base_has_dup(const char *base)
 	ft_bzero(ch, 256);
 	while (base && *base)
 	{
-		if (ch[*base])
+		if (ch[(int)*base])
 			return (1);
-		ch[*base++] = 1;
+		ch[(int)*base++] = 1;
 	}
 	return (0);
 }
