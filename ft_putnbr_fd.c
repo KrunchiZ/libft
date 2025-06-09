@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 11:15:31 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/26 11:30:24 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/09 16:24:19 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ static void	exec_ft_putnbr_fd(long n, int fd, int is_neg, int depth)
 /* Checking for 0 and INT_MIN before exec_ft_putnbr_fd */
 void	ft_putnbr_fd(int n, int fd)
 {
+	if (fd < 0)
+		return ;
 	if (n == 0)
 		ft_putchar_fd('0', fd);
 	else
