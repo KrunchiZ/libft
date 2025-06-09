@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 14:53:30 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/08 21:43:31 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/09 10:51:12 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@
  * */
 static char	*init_uitoa_base(t_ullong nbr, const char *base, size_t base_len)
 {
-	char	tmp[64];
+	char	tmp[65];
 	int		depth;
 
 	is_neg = 0;
-	depth = 63;
+	depth = 64;
 	tmp[depth] = '\0';
-	tmp[62] = base[0];
+	tmp[63] = base[0];
 	if (nbr == 0)
-		return (ft_strdup(&tmp[62]));
+		return (ft_strdup(&tmp[63]));
 	while (nbr)
 	{
 		tmp[--depth] = base[nbr % base_len];

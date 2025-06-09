@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 14:53:30 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/08 19:04:10 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/09 10:50:40 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@
  * */
 static char	*init_itoa_base(long long nbr, const char *base, size_t base_len)
 {
-	char	tmp[64];
+	char	tmp[65];
 	int		depth;
 	int		is_neg;
 
 	is_neg = 0;
-	depth = 63;
+	depth = 64;
 	tmp[depth] = '\0';
-	tmp[62] = base[0];
+	tmp[63] = base[0];
 	if (nbr == 0)
-		return (ft_strdup(&tmp[62]));
+		return (ft_strdup(&tmp[63]));
 	if (nbr < 0)
 	{
 		is_neg = 1;

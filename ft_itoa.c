@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 14:53:30 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/08 18:00:52 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/09 10:50:15 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 /* Convert integer to a string */
 char	*ft_itoa(long long nbr)
 {
-	char	tmp[19];
+	char	tmp[20];
 	int		depth;
 	int		is_neg;
 
 	is_neg = 0;
-	depth = 18;
+	depth = 19;
 	tmp[depth] = '\0';
-	tmp[17] = '0';
+	tmp[18] = '0';
 	if (nbr == 0)
-		return (ft_strdup(&tmp[17]));
+		return (ft_strdup(&tmp[18]));
 	if (nbr < 0)
 	{
 		is_neg = 1;
