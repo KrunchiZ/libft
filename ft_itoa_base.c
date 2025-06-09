@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 14:53:30 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/09 10:50:40 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/09 15:45:33 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /* Convert long long integer to a new base system and return it as a string.
  * */
-static char	*init_itoa_base(long long nbr, const char *base, size_t base_len)
+static char	*init_itoa_base(t_llong nbr, const char *base, size_t base_len)
 {
 	char	tmp[65];
 	int		depth;
@@ -65,7 +65,7 @@ static int	base_has_dup(const char *base)
  * If base length is less than 2, base system is invalid, return NULL.
  * Else, init_itoa_base.
  * */
-char	*ft_itoa_base(long long nbr, const char *base)
+char	*ft_itoa_base(t_llong nbr, const char *base)
 {
 	size_t	base_len;
 

@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/08 21:52:17 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/09 15:44:31 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
-char		*ft_itoa(long long n);
-char		*ft_itoa_base(long long n, const char *base);
+char		*ft_itoa(t_llong nbr);
+char		*ft_itoa_base(t_llong nbr, const char *base);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strdup(const char *src);
 char		*ft_strjoin(const char *s1, const char *s2);
@@ -57,7 +57,8 @@ char		*ft_strnstr(const char *big, const char *little, size_t len);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strtrim(const char *s1, const char *set);
 char		*ft_substr(const char *s, unsigned int start, size_t len);
-char		*ft_uitoa_base(t_ullong n, const char *base);
+char		*ft_uitoa(t_ullong nbr);
+char		*ft_uitoa_base(t_ullong nbr, const char *base);
 void		*ft_calloc(size_t nmemb, size_t size);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		*ft_memcpy(void *dest, const void *src, size_t n);
