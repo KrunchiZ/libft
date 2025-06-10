@@ -32,14 +32,14 @@ $(NAME): $(OBJS)
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "compiling $(CYAN)$@$(WHITE)..."
+	@echo "Compiling $(CYAN)$@$(WHITE)..."
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "removing $(GREEN)$(NAME)$(WHITE)..."
+	@echo "Removing library files..."
 
 clean:
 	@rm -f $(OBJS)
-	@echo "removing object files..."
+	@echo "Removing libft object files..."
 
 re: fclean all
