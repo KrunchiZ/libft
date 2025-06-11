@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 15:28:26 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/11 13:42:56 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/11 19:56:09 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 /* the moment it hits a non digit, return nbr */
 t_llong	ft_atoi(const char *nptr)
 {
-	int			sign;
+	int		sign;
 	t_llong	nbr;
 
 	sign = 1;
