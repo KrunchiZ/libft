@@ -6,17 +6,19 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 15:28:26 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/08 18:43:23 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/11 13:42:56 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /* converts string digits to integer */
 /* only handles one sign character */
 /* the moment it hits a non digit, return nbr */
-long long	ft_atoi(const char *nptr)
+t_llong	ft_atoi(const char *nptr)
 {
 	int			sign;
-	long long	nbr;
+	t_llong	nbr;
 
 	sign = 1;
 	nbr = 0;
