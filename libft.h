@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/11 13:38:14 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/13 20:27:01 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,34 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
+# include <stdarg.h>
 
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
-
-/* Shorthands for unsigned variable types */
+/* Shorthands for unsigned variable types. */
 typedef unsigned char		t_uchar;
 typedef unsigned int		t_uint;
 typedef unsigned long		t_ulong;
 typedef unsigned long long	t_ullong;
 typedef long long			t_llong;
 
-// PART I & II
+/* Struct used in the linked list functions. */
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+/* Linked list functions. */
+int		ft_lstsize(t_list *lst);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list	*ft_lstnew(void *content);
+
+/* Functions in libft Part 1 and Part 2. */
 t_llong	ft_atoi(const char *nptr);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -69,15 +82,66 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
 
-// linked list functions
-int		ft_lstsize(t_list *lst);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstclear(t_list **lst, void (*del)(void *));
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
-void	ft_lstiter(t_list *lst, void (*f)(void *));
-t_list	*ft_lstlast(t_list *lst);
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-t_list	*ft_lstnew(void *content);
+/* ******************************** */
+/* ******************************** */
+/* ********** ft_printf *********** */
+
+# define FLAG_SPEC		"-0# +"
+# define CONVERT_SPEC	"cspdiuxX%"
+# define ALT_FORM		0b000001
+# define ZERO_PAD		0b000010
+# define LEFT_ALIGN		0b000100
+# define ADD_SPACE		0b001000
+# define SHOW_SIGN		0b010000
+# define HAS_PREC		0b100000
+# define LOWER_HEX_BASE	"0123456789abcdef"
+# define UPPER_HEX_BASE	"0123456789ABCDEF"
+
+/* Struct for ft_printf. */
+typedef struct s_spec
+{
+	t_uchar	flag;
+	int		fdwidth;
+	int		precision;
+	int		is_neg;
+	int		is_uphex;
+}			t_spec;
+
+/* Function pointer to call the specifier functions in ft_printf. */
+typedef int					(*t_fptr)(va_list, t_spec);
+
+int		ft_printf(const char *format, ...);
+int		ft_putnbrstr(char *str, int len, t_spec mod);
+
+/* To be called by t_fptr. */
+/* Functions for their respective conversion specifier. */
+int		pf_char(va_list ap, t_spec mod);
+int		pf_string(va_list ap, t_spec mod);
+int		pf_ptr(va_list ap, t_spec mod);
+int		pf_int(va_list ap, t_spec mod);
+int		pf_uint(va_list ap, t_spec mod);
+int		pf_lowerhex(va_list ap, t_spec mod);
+int		pf_upperhex(va_list ap, t_spec mod);
+int		pf_percent(va_list ap, t_spec mod);
+
+/* ************************************** */
+/* ************************************** */
+/* *********** get_next_line ************ */
+
+/* Default BUFFER_SIZE if not defined in terminal */
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 8192
+# endif
+
+/* Soft limits for max file descriptor limit */
+# ifndef MAX_FDS
+#  define MAX_FDS 1024
+# endif
+
+char	*get_next_line(int fd);
+int		has_newline(char *str);
+void	*extract_buffer(char *str);
+char	*string_transfer(char *src);
+char	*read_fd(char *host, char *buffer, int fd);
 
 #endif
