@@ -30,7 +30,7 @@ GNL			:= \
 GNL_DIR		:= get_next_line/
 GNL_SRC		:= $(addprefix $(GNL_DIR), $(GNL))
 
-OBJS		:= $(SRC:.c=.o)
+LIBFT_OBJS	:= $(SRC:.c=.o)
 PRINTF_OBJS	:= $(PRINTF_SRC:.c=.o)
 GNL_OBJS	:= $(GNL_SRC:.c=.o)
 
