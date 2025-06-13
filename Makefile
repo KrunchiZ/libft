@@ -30,19 +30,19 @@ GNL			:= \
 GNL_DIR		:= get_next_line/
 GNL_SRC		:= $(addprefix $(GNL_DIR), $(GNL))
 
-LIBFT_OBJS	:= $(SRC:.c=.o)
-PRINTF_OBJS	:= $(PRINTF_SRC:.c=.o)
-GNL_OBJS	:= $(GNL_SRC:.c=.o)
+OBJS		:= $(LIBFT_SRC:.c=.o)	\
+			   $(PRINTF_SRC:.c=.o)	\
+			   $(GNL_SRC:.c=.o)
 
-GREEN	:= \e[32m
-CYAN	:= \e[36m
-WHITE	:= \e[0m
+GREEN		:= \e[32m
+CYAN		:= \e[36m
+WHITE		:= \e[0m
 
 .PHONY: all fclean clean re
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(PRINTF_OBJS) $(GNL_OBJS)
+$(NAME): $(OBJS)
 	@ar rcs $@ $^
 	@echo "Archiving $(GREEN)$(NAME)$(WHITE)..."
 
@@ -55,7 +55,7 @@ fclean: clean
 	@echo "Removing library files..."
 
 clean:
-	@rm -f $(OBJS) $(PRINTF_OBJS) $(GNL_OBJS)
+	@rm -f $(OBJS)
 	@echo "Removing object files..."
 
 re: fclean all
