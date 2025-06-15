@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/13 21:18:09 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/15 11:53:39 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,14 @@ size_t	ft_strlen(const char *s);
 # define HAS_PREC		0b100000
 # define LOWER_HEX_BASE	"0123456789abcdef"
 # define UPPER_HEX_BASE	"0123456789ABCDEF"
+
+# ifdef __APPLE__
+#  define NULL_STR ""
+#  define NULL_PTR "0x0"
+# else
+#  define NULL_STR "(null)"
+#  define NULL_PTR "(nil)"
+# endif
 
 /* Struct for ft_printf. */
 typedef struct s_spec

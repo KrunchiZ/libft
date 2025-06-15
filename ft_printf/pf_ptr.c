@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 17:34:41 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/13 20:18:19 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/15 11:54:58 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@ int	pf_ptr(va_list ap, t_spec mod)
 	len = 0;
 	if (!ptr)
 	{
-		str = ft_strdup("(nil)");
-		len = 5;
+		str = ft_strdup(NULL_PTR);
+		len = ft_strlen(str);
 		mod.flag &= LEFT_ALIGN;
 	}
 	else
