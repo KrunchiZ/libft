@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/15 11:53:39 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/24 18:01:49 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,13 +123,13 @@ int		ft_putnbrstr(char *str, int len, t_spec mod);
 
 /* To be called by t_fptr. */
 /* Functions for their respective conversion specifier. */
-int		pf_char(va_list ap, t_spec mod);
-int		pf_string(va_list ap, t_spec mod);
-int		pf_ptr(va_list ap, t_spec mod);
-int		pf_int(va_list ap, t_spec mod);
-int		pf_upperhex(va_list ap, t_spec mod);
-int		pf_lowerhex(va_list ap, t_spec mod);
-int		pf_percent(va_list ap, t_spec mod);
+int		pf_char(va_list *ap, t_spec mod);
+int		pf_string(va_list *ap, t_spec mod);
+int		pf_ptr(va_list *ap, t_spec mod);
+int		pf_int(va_list *ap, t_spec mod);
+int		pf_upperhex(va_list *ap, t_spec mod);
+int		pf_lowerhex(va_list *ap, t_spec mod);
+int		pf_percent(va_list *ap, t_spec mod);
 
 /* ************************************** */
 /* ************************************** */
