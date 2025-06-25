@@ -19,7 +19,7 @@ LIBFT_DIR	:= libft/
 LIBFT_SRC	:= $(addprefix $(LIBFT_DIR), $(LIBFT))
 
 PRINTF		:= \
-			   pf_char.c	pf_string.c	pf_int.c		\
+			   pf_char_string.c			pf_int.c		\
 			   pf_ptr.c		pf_hex.c	pf_percent.c	\
 			   ft_printf.c	ft_putnbrstr.c
 PRINTF_DIR	:= ft_printf/
