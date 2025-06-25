@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/24 18:01:49 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/25 18:07:11 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,7 @@ typedef struct s_spec
 }			t_spec;
 
 /* Function pointer to call the specifier functions in ft_printf. */
-typedef int					(*t_fptr)(va_list, t_spec);
+typedef int					(*t_fptr)(va_list *, t_spec);
 
 int		ft_printf(const char *format, ...);
 int		ft_putnbrstr(char *str, int len, t_spec mod);
