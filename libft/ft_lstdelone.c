@@ -17,13 +17,9 @@
 /* free the extracted node */
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list	*junk;
-
 	if (!lst || !del)
 		return ;
 	del(lst->content);
-	junk = lst;
-	lst = lst->next;
-	free(junk);
+	free(lst);
 	return ;
 }
