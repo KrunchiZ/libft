@@ -6,19 +6,19 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 09:19:41 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/26 16:13:00 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/07/02 16:51:41 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* ft_strlen but with a separator c check as well */
-static int	ft_wordlen(const char *s, const char c)
+/* ft_strlen but with separator set check as well */
+static int	ft_wordlen(const char *s, const char *set)
 {
 	int	len;
 
 	len = 0;
-	while (*s != c && *s != '\0')
+	while (!ft_strchr(set, *s) && *s != '\0')
 	{
 		len++;
 		s++;
@@ -27,7 +27,7 @@ static int	ft_wordlen(const char *s, const char c)
 }
 
 /* move across s and allocata memory for every word */
-static int	ft_fillhost(char **host, const char *s, char c, int word)
+static int	ft_fillhost(char **host, const char *s, const char *set, int word)
 {
 	int	i;
 	int	depth;
@@ -37,9 +37,10 @@ static int	ft_fillhost(char **host, const char *s, char c, int word)
 	depth = 0;
 	while (depth < word)
 	{
-		if (s[i] != c && (i == 0 || (i > 0 && s[i - 1] == c)))
+		if (!ft_strchr(set, s[i])
+			&& (i == 0 || (i > 0 && ft_strchr(set, s[i - 1]))))
 		{
-			wordlen = ft_wordlen(&s[i], c);
+			wordlen = ft_wordlen(&s[i], set);
 			host[depth] = malloc(wordlen + 1);
 			if (host == NULL)
 			{
@@ -57,7 +58,7 @@ static int	ft_fillhost(char **host, const char *s, char c, int word)
 }
 
 /* split s into individual word in an array and return it */
-char	**ft_split(const char *s, char c)
+char	**ft_split(const char *s, const char *set)
 {
 	int		i;
 	int		word;
@@ -69,7 +70,8 @@ char	**ft_split(const char *s, char c)
 	word = 0;
 	while (s[i])
 	{
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+		if (!ft_strchr(set, s[i])
+			&& (ft_strchr(set, s[i + 1]) || s[i + 1] == '\0'))
 			word++;
 		i++;
 	}
@@ -77,7 +79,7 @@ char	**ft_split(const char *s, char c)
 	if (!host)
 		return (NULL);
 	host[word] = NULL;
-	if (ft_fillhost(host, s, c, word))
+	if (ft_fillhost(host, s, set, word))
 		return (host);
 	return (NULL);
 }
