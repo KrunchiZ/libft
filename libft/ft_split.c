@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 09:19:41 by kchiang           #+#    #+#             */
-/*   Updated: 2025/07/02 16:51:41 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/07/02 17:01:43 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,7 @@ static int	ft_fillhost(char **host, const char *s, const char *set, int word)
 			{
 				while (depth >= 0)
 					free(host[depth--]);
-				free(host);
-				return (0);
+				return (free(host), 0);
 			}
 			ft_strlcpy(host[depth], &s[i], wordlen + 1);
 			depth++;
