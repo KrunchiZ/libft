@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/07/02 16:52:43 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/07/03 01:10:51 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,7 +137,7 @@ int		pf_percent(va_list *ap, t_spec mod);
 
 /* Default BUFFER_SIZE if not defined in terminal */
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 8192
+#  define BUFFER_SIZE 1024
 # endif
 
 /* Soft limits for max file descriptor limit */
