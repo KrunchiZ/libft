@@ -28,12 +28,14 @@ GNL		= \
 LIBFT_DIR	= src/libft/
 PRINTF_DIR	= src/ft_printf/
 GNL_DIR		= src/get_next_line/
+OBJS_DIR	= build/
+
+OBJS	= $(LIBFT:.c=.o)	\
+		  $(PRINTF:.c=.o)	\
+		  $(GNL:.c=.o)
 
 vpath %.c $(LIBFT_DIR) $(PRINTF_DIR) $(GNL_DIR)
-
-OBJS	= $(addprefix $(LIBFT_DIR), $(LIBFT:.c=.o))		\
-		  $(addprefix $(PRINTF_DIR), $(PRINTF:.c=.o))	\
-		  $(addprefix $(GNL_DIR), $(GNL:.c=.o))
+vpath %.o $(OBJS_DIR)
 
 GREEN	= \e[32m
 CYAN	= \e[36m
@@ -48,7 +50,7 @@ $(NAME): $(OBJS)
 	@echo "Archiving $(GREEN)$(NAME)$(WHITE)..."
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $(OBJS_DIR)/$@
 	@echo "Compiling $(CYAN)$@$(WHITE)..."
 
 fclean: clean
