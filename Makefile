@@ -45,7 +45,7 @@ WHITE	= \e[0m
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@ar rcs $@ $^
+	@ar rcs $@ $(addprefix $(OBJS_DIR), $^)
 	@echo "Archiving $(GREEN)$(NAME)$(WHITE)..."
 
 %.o: %.c
