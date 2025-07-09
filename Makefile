@@ -35,6 +35,7 @@ OBJS	= $(LIBFT:.c=.o)	\
 		  $(GNL:.c=.o)
 
 vpath %.c $(LIBFT_DIR) $(PRINTF_DIR) $(GNL_DIR)
+vpath %.o $(OBJS_DIR)
 
 GREEN	= \e[32m
 CYAN	= \e[36m
