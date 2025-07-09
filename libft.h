@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/07/03 01:10:51 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/07/09 12:29:23 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
-# include <stdarg.h>
 
 /* Shorthands for unsigned variable types. */
 typedef unsigned char		t_uchar;
@@ -82,73 +81,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
 
-/* ******************************** */
-/* ******************************** */
 /* ********** ft_printf *********** */
-
-# define FLAG_SPEC		"-0# +"
-# define CONVERT_SPEC	"cspdiuxX%"
-# define ALT_FORM		0b000001
-# define ZERO_PAD		0b000010
-# define LEFT_ALIGN		0b000100
-# define ADD_SPACE		0b001000
-# define SHOW_SIGN		0b010000
-# define HAS_PREC		0b100000
-# define LOWER_HEX_BASE	"0123456789abcdef"
-# define UPPER_HEX_BASE	"0123456789ABCDEF"
-
-# ifdef __APPLE__
-#  define NULL_STR ""
-#  define NULL_PTR "0x0"
-# else
-#  define NULL_STR "(null)"
-#  define NULL_PTR "(nil)"
-# endif
-
-/* Struct for ft_printf. */
-typedef struct s_spec
-{
-	t_uchar	flag;
-	int		fdwidth;
-	int		precision;
-	int		is_neg;
-	int		is_uphex;
-}			t_spec;
-
-/* Function pointer to call the specifier functions in ft_printf. */
-typedef int					(*t_fptr)(va_list *, t_spec);
-
 int		ft_printf(const char *format, ...);
-int		ft_putnbrstr(char *str, int len, t_spec mod);
 
-/* To be called by t_fptr. */
-/* Functions for their respective conversion specifier. */
-int		pf_char(va_list *ap, t_spec mod);
-int		pf_string(va_list *ap, t_spec mod);
-int		pf_ptr(va_list *ap, t_spec mod);
-int		pf_int(va_list *ap, t_spec mod);
-int		pf_upperhex(va_list *ap, t_spec mod);
-int		pf_lowerhex(va_list *ap, t_spec mod);
-int		pf_percent(va_list *ap, t_spec mod);
-
-/* ************************************** */
-/* ************************************** */
-/* *********** get_next_line ************ */
-
-/* Default BUFFER_SIZE if not defined in terminal */
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1024
-# endif
-
-/* Soft limits for max file descriptor limit */
-# ifndef MAX_FDS
-#  define MAX_FDS 1024
-# endif
-
+/* ******** get_next_line ********* */
 char	*get_next_line(int fd);
-int		has_newline(char *str);
-void	*extract_buffer(char *str);
-char	*string_transfer(char *src);
-char	*read_fd(char *host, char *buffer, int fd);
 
 #endif

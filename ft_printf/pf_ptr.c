@@ -6,11 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 17:34:41 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/24 18:04:05 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/06/24 17:57:18 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
 static char	*init_prec(char *str, t_spec *mod, int *len)
 {
@@ -67,8 +67,8 @@ int	pf_ptr(va_list *ap, t_spec mod)
 	len = 0;
 	if (!ptr)
 	{
-		str = ft_strdup(NULL_PTR);
-		len = ft_strlen(str);
+		str = ft_strdup("(nil)");
+		len = 5;
 		mod.flag &= LEFT_ALIGN;
 	}
 	else
