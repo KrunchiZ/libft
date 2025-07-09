@@ -1,5 +1,5 @@
 CC		:= cc
-CFLAGS	:= -Wall -Wextra -Werror
+CFLAGS	:= -Wall -Wextra -Werror -I.
 
 NAME	:= libft.a
 LIBFT	:= \
@@ -15,20 +15,18 @@ LIBFT	:= \
 		   ft_lstnew.c		ft_lstadd_front.c	ft_lstsize.c	ft_lstlast.c	\
 		   ft_lstiter.c		ft_lstadd_back.c	ft_lstdelone.c	ft_lstclear.c	\
 		   ft_lstmap.c		ft_uitoa.c
-LIBFT_DIR	:= libft/
-LIBFT_SRC	:= $(addprefix $(LIBFT_DIR), $(LIBFT))
 
 PRINTF		:= \
-			   pf_char_string.c			pf_int.c		\
-			   pf_ptr.c		pf_hex.c	pf_percent.c	\
-			   ft_printf.c	ft_putnbrstr.c
-PRINTF_DIR	:= ft_printf/
-PRINTF_SRC	:= $(addprefix $(PRINTF_DIR), $(PRINTF))
+			   pf_char_string.c	pf_int.c	pf_ptr.c	pf_hex.c	\
+			   pf_percent.c		ft_printf.c	ft_putnbrstr.c
 
 GNL			:= \
 			   get_next_line.c	get_next_line_utils.c
+
+LIBFT_DIR	:= libft/
+PRINTF_DIR	:= ft_printf/
 GNL_DIR		:= get_next_line/
-GNL_SRC		:= $(addprefix $(GNL_DIR), $(GNL))
+vpath %.c $(LIBFT_DIR) $(PRINTF_DIR) $(GNL_DIR)
 
 OBJS		:= $(LIBFT_SRC:.c=.o)	\
 			   $(PRINTF_SRC:.c=.o)	\
@@ -47,7 +45,7 @@ $(NAME): $(OBJS)
 	@echo "Archiving $(GREEN)$(NAME)$(WHITE)..."
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -I. -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 	@echo "Compiling $(CYAN)$@$(WHITE)..."
 
 fclean: clean
