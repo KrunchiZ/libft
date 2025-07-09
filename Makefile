@@ -30,9 +30,9 @@ PRINTF_DIR	= src/ft_printf
 GNL_DIR		= src/get_next_line
 OBJS_DIR	= build/
 
-OBJS	= $(addprefix $(OBJS_DIR), $(LIBFT:.c=.o))	\
-		  $(addprefix $(OBJS_DIR), $(PRINTF:.c=.o))	\
-		  $(addprefix $(OBJS_DIR), $(GNL:.c=.o))
+OBJS	= $(LIBFT:.c=.o)	\
+		  $(PRINTF:.c=.o)	\
+		  $(GNL:.c=.o)
 
 vpath %.c $(LIBFT_DIR) $(PRINTF_DIR) $(GNL_DIR)
 
@@ -49,7 +49,7 @@ $(NAME): $(OBJS)
 	@echo "Archiving $(GREEN)$(NAME)$(WHITE)..."
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $(addprefix $(OBJS_DIR), $@)
 	@echo "Compiling $(CYAN)$@$(WHITE)..."
 
 fclean: clean
@@ -57,7 +57,7 @@ fclean: clean
 	@echo "Removing library files..."
 
 clean:
-	@rm -f $(OBJS)
+	@rm -f $(addprefix $(OBJS_DIR), $(OBJS))
 	@echo "Removing object files..."
 
 re: fclean all
