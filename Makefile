@@ -2,7 +2,7 @@ CC		= cc
 CFLAGS	= -Wall -Wextra -Werror -I$(INCLUDE)
 
 NAME	= libft.a
-INCLUDE	= include/
+INCLUDE	= include
 
 LIBFT	= \
 		  ft_atoi.c			ft_bzero.c			ft_calloc.c		ft_isalnum.c	\
@@ -25,9 +25,9 @@ PRINTF	= \
 GNL		= \
 		  get_next_line.c	get_next_line_utils.c
 
-LIBFT_DIR	= src/libft/
-PRINTF_DIR	= src/ft_printf/
-GNL_DIR		= src/get_next_line/
+LIBFT_DIR	= src/libft
+PRINTF_DIR	= src/ft_printf
+GNL_DIR		= src/get_next_line
 OBJS_DIR	= build/
 
 OBJS	= $(LIBFT:.c=.o)	\
@@ -35,7 +35,6 @@ OBJS	= $(LIBFT:.c=.o)	\
 		  $(GNL:.c=.o)
 
 vpath %.c $(LIBFT_DIR) $(PRINTF_DIR) $(GNL_DIR)
-vpath %.o $(OBJS_DIR)
 
 GREEN	= \e[32m
 CYAN	= \e[36m
@@ -46,11 +45,11 @@ WHITE	= \e[0m
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@ar rcs $@ $^
+	@ar rcs $@ $(addprefix $(OBJS_DIR), $^)
 	@echo "Archiving $(GREEN)$(NAME)$(WHITE)..."
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $(OBJS_DIR)/$@
+	@$(CC) $(CFLAGS) -c $< -o $(addprefix $(OBJS_DIR), $@)
 	@echo "Compiling $(CYAN)$@$(WHITE)..."
 
 fclean: clean
@@ -58,7 +57,7 @@ fclean: clean
 	@echo "Removing library files..."
 
 clean:
-	@rm -f $(OBJS)
+	@rm -f $(addprefix $(OBJS_DIR), $(OBJS))
 	@echo "Removing object files..."
 
 re: fclean all
