@@ -31,9 +31,9 @@ GNL_DIR		= src/get_next_line/
 
 vpath %.c $(LIBFT_DIR) $(PRINTF_DIR) $(GNL_DIR)
 
-OBJS	= $(LIBFT:.c=.o)	\
-		  $(PRINTF:.c=.o)	\
-		  $(GNL:.c=.o)
+OBJS	= $(addprefix $(LIBFT_DIR), $(LIBFT:.c=.o))		\
+		  $(addprefix $(PRINTF_DIR), $(PRINTF:.c=.o))	\
+		  $(addprefix $(GNL_DIR), $(GNL:.c=.o))
 
 GREEN	= \e[32m
 CYAN	= \e[36m
