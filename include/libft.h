@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/07/14 20:47:37 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/07/14 20:59:32 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
-# include <stdbool.h>
 
 /* Shorthands for unsigned variable types. */
 typedef unsigned char		t_uchar;
