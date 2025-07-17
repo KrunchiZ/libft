@@ -55,10 +55,10 @@ $(NAME): $(OBJS)
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "Removing library files..."
+	@echo "Removing $(GREEN)$(NAME)$(WHITE) files..."
 
 clean:
 	@rm -f $(addprefix $(OBJS_DIR), $(OBJS))
-	@echo "Removing object files..."
+	@echo "Removing $(GREEN)object$(WHITE) files..."
 
 re: fclean all
