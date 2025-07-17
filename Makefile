@@ -59,6 +59,6 @@ fclean: clean
 
 clean:
 	@rm -f $(addprefix $(OBJS_DIR), $(OBJS))
-	@echo "Removing $(GREEN)object$(WHITE) files..."
+	@echo "Removing $(CYAN)object$(WHITE) files..."
 
 re: fclean all
