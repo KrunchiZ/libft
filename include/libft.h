@@ -6,13 +6,14 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/07/14 20:59:32 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/07/28 16:16:25 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
