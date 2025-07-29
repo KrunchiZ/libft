@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 14:53:30 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/09 15:45:33 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/07/29 15:33:57 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,10 @@ static int	base_has_dup(const char *base)
 	while (base && *base)
 	{
 		if (ch[(int)*base])
-			return (1);
+			return (true);
 		ch[(int)*base++] = 1;
 	}
-	return (0);
+	return (false);
 }
 
 /* ft_strlen to determine the base system of base string.
