@@ -42,23 +42,24 @@ CYAN	= \e[36m
 WHITE	= \e[0m
 
 .PHONY: all fclean clean re
+.SILENT:
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@ar rcs $@ $(addprefix $(OBJS_DIR), $^)
-	@echo "Archiving $(GREEN)$(NAME)$(WHITE)..."
+	ar rcs $@ $(addprefix $(OBJS_DIR), $^)
+	echo "Archiving $(GREEN)$(NAME)$(WHITE)..."
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $(addprefix $(OBJS_DIR), $@)
-	@echo "Compiling $(CYAN)$@$(WHITE)..."
+	$(CC) $(CFLAGS) -c $< -o $(addprefix $(OBJS_DIR), $@)
+	echo "Compiling $(CYAN)$@$(WHITE)..."
 
 fclean: clean
-	@rm -f $(NAME)
-	@echo "Removing $(GREEN)$(NAME)$(WHITE) files..."
+	rm -f $(NAME)
+	echo "Removing $(GREEN)$(NAME)$(WHITE) files..."
 
 clean:
-	@rm -f $(addprefix $(OBJS_DIR), $(OBJS))
-	@echo "Removing $(CYAN)object$(WHITE) files..."
+	rm -f $(addprefix $(OBJS_DIR), $(OBJS))
+	echo "Removing $(CYAN)object$(WHITE) files..."
 
 re: fclean all
