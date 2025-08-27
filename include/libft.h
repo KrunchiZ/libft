@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/08/12 17:42:46 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/08/27 16:39:05 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@
 # include <unistd.h>
 # include <stdint.h>
 # include <stdbool.h>
+
+/* Whitespaces delimiter for ft_split.
+ * */
+# define WHITESPACE	" \t\n\v\f\r"
 
 /* Shorthands for unsigned variable types. */
 typedef unsigned char		t_uchar;
