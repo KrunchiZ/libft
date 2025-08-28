@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/08/28 17:18:35 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/08/28 19:11:16 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <stdint.h>
 # include <stdbool.h>
+# include <limits.h>
 
 /* Whitespaces delimiter for ft_split.
  * */
@@ -52,6 +53,7 @@ t_list	*ft_lstnew(void *content);
 int		ft_atoi(const char *nptr);
 int		ft_atoi_base(const char *nptr, const char *base);
 t_llong	ft_atoll(const char *nptr);
+t_llong	ft_llabs(t_llong j);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
