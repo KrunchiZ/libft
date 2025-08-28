@@ -6,13 +6,13 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 15:28:26 by kchiang           #+#    #+#             */
-/*   Updated: 2025/08/28 17:28:12 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/08/28 17:45:16 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* converts string digits to integer */
 /* the moment it hits a non digit, return nbr */
-int	ft_atoi_base(const char *nptr, const char *set)
+int	ft_atoi_base(const char *nptr, const char *base)
 {
 	int	sign;
 	int	nbr;
@@ -29,12 +29,12 @@ int	ft_atoi_base(const char *nptr, const char *set)
 			sign = -sign;
 		nptr++;
 	}
-	if (ft_strncmp(nptr, "0x", 2) || ft_strncmp(nptr, "0X", 2))
+	if (!ft_strncmp(nptr, "0x", 2) || !ft_strncmp(nptr, "0X", 2))
 		nptr += 2;
-	while (ft_strchr(set, *nptr))
+	while (ft_strchr(base, *nptr))
 	{
-		nbr *= 10;
-		nbr += *nptr - '0';
+		nbr *= ft_strlen(base);
+		nbr += ft_strchr(base, *nptr) - base;
 		nptr++;
 	}
 	return (nbr * sign);
