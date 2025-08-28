@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 15:28:26 by kchiang           #+#    #+#             */
-/*   Updated: 2025/08/28 19:17:56 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/08/28 19:25:09 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi_base(const char *nptr, const char *base)
 			sign = -sign;
 		nptr++;
 	}
-	while (ft_strchr(base, *nptr))
+	while (*nptr && ft_strchr(base, *nptr))
 	{
 		nbr *= ft_strlen(base);
 		nbr += ft_strchr(base, *nptr) - base;
