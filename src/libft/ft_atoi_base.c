@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 15:28:26 by kchiang           #+#    #+#             */
-/*   Updated: 2025/08/28 17:19:19 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/08/28 17:28:12 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* converts string digits to integer */
 /* the moment it hits a non digit, return nbr */
-int	ft_atoi(const char *nptr)
+int	ft_atoi_base(const char *nptr, const char *set)
 {
 	int	sign;
 	int	nbr;
@@ -29,7 +29,9 @@ int	ft_atoi(const char *nptr)
 			sign = -sign;
 		nptr++;
 	}
-	while (*nptr >= '0' && *nptr <= '9')
+	if (ft_strncmp(nptr, "0x", 2) || ft_strncmp(nptr, "0X", 2))
+		nptr += 2;
+	while (ft_strchr(set, *nptr))
 	{
 		nbr *= 10;
 		nbr += *nptr - '0';
