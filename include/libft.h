@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/08/30 22:41:50 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/09/06 12:18:32 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdint.h>
 # include <stdbool.h>
 # include <limits.h>
+# include <float.h>
 
 /* Whitespaces delimiter for ft_split.
  * */
