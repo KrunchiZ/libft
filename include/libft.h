@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/09/06 12:18:32 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/09/06 12:23:58 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ t_list	*ft_lstnew(void *content);
 
 /* Functions in libft Part 1 and Part 2. */
 int		ft_abs(int j);
+float	ft_fabs(float j);
 int		ft_atoi(const char *nptr);
 int		ft_atoi_base(const char *nptr, const char *base);
 t_llong	ft_atoll(const char *nptr);

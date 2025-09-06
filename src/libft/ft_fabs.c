@@ -6,13 +6,13 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 18:58:09 by kchiang           #+#    #+#             */
-/*   Updated: 2025/09/06 12:21:42 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/09/06 12:24:15 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-float	ft_abs(float j)
+float	ft_fabs(float j)
 {
 	return (j * ((j > 0.0f) - (j < 0.0f)));
 }
