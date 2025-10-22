@@ -6,11 +6,12 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/07 13:55:14 by kchiang           #+#    #+#             */
-/*   Updated: 2025/10/22 19:56:12 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 22:56:45 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdarg.h>
 #include "libft.h"
 #include "libftprintf.h"
 
