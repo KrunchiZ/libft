@@ -6,11 +6,9 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 10:35:27 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/24 13:26:11 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 19:00:41 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /* Apply function f on every character in s */
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))

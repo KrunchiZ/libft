@@ -6,11 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 17:32:25 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/24 15:05:37 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 18:55:10 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 // copy n bytes from src to dest
 void	*ft_memcpy(void *dest, const void *src, size_t n)

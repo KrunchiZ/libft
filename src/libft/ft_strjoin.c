@@ -6,10 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:52:10 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/26 14:40:05 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 19:01:23 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 /* return the combination of s1 and s2. NULL if failed */

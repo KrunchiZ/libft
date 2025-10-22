@@ -6,10 +6,12 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 14:53:30 by kchiang           #+#    #+#             */
-/*   Updated: 2025/07/29 15:34:16 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 19:08:51 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+#include <stdbool.h>
 #include "libft.h"
 
 /* Convert unsigned long long integer to a new base system and

@@ -6,10 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 14:45:41 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/23 21:27:37 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 19:06:54 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 /* return a substring starting the start index of s */

@@ -6,10 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 15:12:01 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/31 16:27:43 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 19:01:46 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 // replicating strlcat

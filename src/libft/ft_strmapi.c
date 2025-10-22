@@ -6,10 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 16:13:34 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/26 12:16:40 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 19:03:23 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 /* Apply function f with every character in s passed as a parameter*/

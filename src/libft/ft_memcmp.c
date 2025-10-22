@@ -6,11 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 12:21:22 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/26 12:24:08 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 18:54:51 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 /* Compare first n bytes of s1 and s2 as unsigned char */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

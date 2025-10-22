@@ -6,10 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 11:11:14 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/24 13:24:54 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 19:00:13 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 /* duplicate a string using malloc then return it */

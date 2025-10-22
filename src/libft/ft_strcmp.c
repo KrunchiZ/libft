@@ -6,11 +6,9 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 17:41:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/08/12 17:45:19 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 18:59:43 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

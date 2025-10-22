@@ -6,11 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:22:11 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/24 14:09:58 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 18:54:20 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 // look for c in s for the first n bytes
 // return NULL if nothing is found

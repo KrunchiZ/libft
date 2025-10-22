@@ -6,10 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 11:06:00 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/09 16:25:32 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 18:58:02 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
 
 // write string s to the file descriptor fd
