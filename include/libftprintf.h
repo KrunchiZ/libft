@@ -6,12 +6,14 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 11:40:41 by kchiang           #+#    #+#             */
-/*   Updated: 2025/10/22 19:29:21 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 19:55:05 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFTPRINTF_H
 # define LIBFTPRINTF_H
+
+# include <stdarg.h>
 
 # define FLAG_SPEC		"-0# +"
 # define CONVERT_SPEC	"cspdiuxX%"
