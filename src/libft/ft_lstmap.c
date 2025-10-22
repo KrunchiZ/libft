@@ -6,10 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 21:40:07 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/26 14:37:29 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 18:48:28 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 /* Apply function f on the content of each node in lst */

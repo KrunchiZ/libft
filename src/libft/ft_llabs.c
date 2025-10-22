@@ -6,13 +6,13 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 18:58:09 by kchiang           #+#    #+#             */
-/*   Updated: 2025/08/28 19:10:20 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 18:42:34 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <limits.h>
 
-t_llong	ft_llabs(t_llong j)
+long long	ft_llabs(long long j)
 {
 	if (j == LLONG_MIN)
 		return (j);

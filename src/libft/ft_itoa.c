@@ -6,14 +6,14 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 14:53:30 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/09 15:45:09 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 18:51:39 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /* Convert integer to a string */
-char	*ft_itoa(t_llong nbr)
+char	*ft_itoa(long long nbr)
 {
 	char	tmp[20];
 	int		depth;

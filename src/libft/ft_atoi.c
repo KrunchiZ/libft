@@ -6,12 +6,10 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 15:28:26 by kchiang           #+#    #+#             */
-/*   Updated: 2025/08/28 17:19:19 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 18:31:22 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* converts string digits to integer */
-/* the moment it hits a non digit, return nbr */
 int	ft_atoi(const char *nptr)
 {
 	int	sign;

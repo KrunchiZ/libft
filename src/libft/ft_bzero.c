@@ -6,11 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 17:18:20 by kchiang           #+#    #+#             */
-/*   Updated: 2025/05/24 14:06:28 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 18:50:15 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 // replace the first n bytes pointed by s with zeroes
 void	ft_bzero(void *s, size_t n)
