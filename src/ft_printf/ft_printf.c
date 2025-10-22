@@ -6,10 +6,13 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 10:47:09 by kchiang           #+#    #+#             */
-/*   Updated: 2025/06/24 17:54:27 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/22 19:29:19 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdarg.h>
+#include <unistd.h>
+#include "libft.h"
 #include "libftprintf.h"
 
 /* Calls the pf functions based on their respective conversion specifier.
