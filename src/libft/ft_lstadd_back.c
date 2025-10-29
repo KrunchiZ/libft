@@ -6,11 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 17:14:30 by kchiang           #+#    #+#             */
-/*   Updated: 2025/10/22 18:45:04 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/29 12:17:35 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftlst.h"
 
 /* Added new to the back of lst */
 void	ft_lstadd_back(t_list **lst, t_list *new)

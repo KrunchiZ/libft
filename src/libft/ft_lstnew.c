@@ -6,12 +6,12 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 12:50:54 by kchiang           #+#    #+#             */
-/*   Updated: 2025/10/22 18:48:00 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/29 12:17:44 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include "libftlst.h"
 
 /* return a struct node initialized with content. */
 t_list	*ft_lstnew(void *content)

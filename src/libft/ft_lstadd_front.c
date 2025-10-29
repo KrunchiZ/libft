@@ -6,11 +6,11 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 15:25:26 by kchiang           #+#    #+#             */
-/*   Updated: 2025/10/22 18:44:47 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/29 12:19:44 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftlst.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

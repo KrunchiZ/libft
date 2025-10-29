@@ -6,7 +6,7 @@
 /*   By: kchiang <kchiang@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:52:05 by kchiang           #+#    #+#             */
-/*   Updated: 2025/10/22 19:53:12 by kchiang          ###   ########.fr       */
+/*   Updated: 2025/10/29 12:14:21 by kchiang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,25 +26,13 @@ typedef unsigned long		t_ulong;
 typedef unsigned long long	t_ullong;
 typedef long long			t_llong;
 
-/* Struct used in the linked list functions. */
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+/* ********** ft_printf *********** */
+int		ft_printf(const char *format, ...);
 
-/* Linked list functions. */
-int		ft_lstsize(t_list *lst);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstclear(t_list **lst, void (*del)(void *));
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
-void	ft_lstiter(t_list *lst, void (*f)(void *));
-t_list	*ft_lstlast(t_list *lst);
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-t_list	*ft_lstnew(void *content);
+/* ******** get_next_line ********* */
+char	*get_next_line(int fd);
 
-/* Functions in libft Part 1 and Part 2. */
+/* ****** Functions in libft ****** */
 int		ft_abs(int j);
 float	ft_fabs(float j);
 int		ft_atoi(const char *nptr);
@@ -88,11 +76,5 @@ char	**ft_split(const char *s, const char *set);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
-
-/* ********** ft_printf *********** */
-int		ft_printf(const char *format, ...);
-
-/* ******** get_next_line ********* */
-char	*get_next_line(int fd);
 
 #endif
